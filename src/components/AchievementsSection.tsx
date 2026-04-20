@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const ACHIEVEMENTS = [
@@ -92,6 +91,32 @@ export default function AchievementsSection() {
               </p>
             </motion.div>
           ))}
+        </div>
+
+        {/* View All Button */}
+        <div className="mt-16 flex justify-center">
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="group flex items-center gap-3 px-8 py-3.5 md:px-10 md:py-4 rounded-full bg-[#111111] border border-white/10 text-xs md:text-sm font-bold tracking-[0.2em] text-white hover:text-white hover:bg-[#181818] hover:border-white/20 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
+          >
+            VIEW ALL ACHIEVEMENTS
+            <svg 
+              width="18" 
+              height="18" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              className="transform group-hover:translate-x-1 transition-transform duration-300"
+            >
+              <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+            </svg>
+          </motion.button>
         </div>
 
       </div>
