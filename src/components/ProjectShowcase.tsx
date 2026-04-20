@@ -36,7 +36,7 @@ const PROJECTS = [
 
 export default function ProjectShowcase() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const cardsRef = useRef<(HTMLAnchorElement | null)[]>([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -62,7 +62,7 @@ export default function ProjectShowcase() {
     return () => ctx.revert();
   }, []);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;

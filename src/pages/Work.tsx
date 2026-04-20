@@ -114,8 +114,8 @@ export default function Work() {
               className="project-card"
               style={{
                 transitionDelay: `${index * 120}ms`,
-                ['--project-gradient' as '--project-gradient']: project.gradient,
-              }}
+                '--project-gradient': project.gradient,
+              } as React.CSSProperties}
               onMouseMove={(event) => handlePointerMove(event, index)}
               onMouseLeave={() => handlePointerLeave(index)}
               onClick={() => setActiveProject(project)}
