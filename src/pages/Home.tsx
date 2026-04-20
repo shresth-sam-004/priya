@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
 import HomeAbout from '../components/HomeAbout';
+import AchievementsSection from '../components/AchievementsSection';
 import ProjectShowcase from '../components/ProjectShowcase';
 import SkillsShowcase from '../components/SkillsShowcase';
 import ContactSection from '../components/ContactSection';
@@ -188,8 +189,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div ref={containerRef} className="h-[800vh] w-full relative bg-transparent transition-colors duration-500">
-      <div className="sticky top-0 h-screen w-full overflow-hidden">
+    <div className="w-full bg-[#0a0a0c]">
+      {/* 800vh Canvas Scrolling Block */}
+      <div ref={containerRef} className="h-[800vh] w-full relative bg-transparent transition-colors duration-500">
+        <div className="sticky top-0 h-screen w-full overflow-hidden">
         <div ref={gridRef} className="grid-bg"></div>
         
         <canvas 
@@ -273,17 +276,25 @@ export default function Home() {
         </section>
       </div>
 
-      {/* Advanced Aesthetic About Section */}
-      <HomeAbout />
+      </div>
 
-      {/* Premium Dark Project Showcase */}
-      <ProjectShowcase />
+      {/* Standard Flow Document Content (Outside of 800vh ScrollTrigger bounds) */}
+      <div className="relative z-40 bg-[#0a0a0c]">
+        {/* Advanced Aesthetic About Section */}
+        <HomeAbout />
 
-      {/* Physics-Based 3D Floating Skills Section */}
-      <SkillsShowcase />
+        {/* Modern Minimal Achievements Box */}
+        <AchievementsSection />
 
-      {/* Modern Minimal Contact Layer */}
-      <ContactSection />
+        {/* Premium Dark Project Showcase */}
+        <ProjectShowcase />
+
+        {/* Physics-Based 3D Floating Skills Section */}
+        <SkillsShowcase />
+
+        {/* Modern Minimal Contact Layer */}
+        <ContactSection />
+      </div>
     </div>
   );
 }
