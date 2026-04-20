@@ -114,14 +114,6 @@ const ContactSection = () => {
         </a>
 
       </div>
-      
-      {/* Footer base text
-      <div className="mt-24 text-center">
-        <p className="text-sm font-light tracking-wider text-white/30 uppercase">
-          © {new Date().getFullYear()} Ashutosh. All rights reserved.
-        </p>
-      </div> */}
-
     </section>
   );
 };

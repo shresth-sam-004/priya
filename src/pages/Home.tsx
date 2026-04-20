@@ -130,10 +130,7 @@ export default function Home() {
         duration: 0.3
       }, 0.2);
       
-      tl.to('body', {
-        backgroundColor: '#ffffff',
-        duration: 0.3
-      }, 0.8);
+      // Removed white background transition
 
     }
 
@@ -190,8 +187,8 @@ export default function Home() {
 
   return (
     <div className="w-full bg-[#0a0a0c]">
-      {/* 800vh Canvas Scrolling Block */}
-      <div ref={containerRef} className="h-[800vh] w-full relative bg-transparent transition-colors duration-500">
+      {/* 600vh Canvas Scrolling Block (Reduced from 800vh to remove gap) */}
+      <div ref={containerRef} className="h-[600vh] w-full relative bg-transparent transition-colors duration-500">
         <div className="sticky top-0 h-screen w-full overflow-hidden">
         <div ref={gridRef} className="grid-bg"></div>
         
@@ -264,7 +261,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="h-screen flex items-center justify-center px-10 md:px-20">
+        <section className="h-[120vh] flex items-center justify-center px-10 md:px-20">
           <div className="info-block text-center max-w-4xl">
             <h2 className="text-5xl md:text-8xl font-black tracking-tighter uppercase text-white mb-4">
               Transforming Ideas
@@ -278,8 +275,8 @@ export default function Home() {
 
       </div>
 
-      {/* Standard Flow Document Content (Outside of 800vh ScrollTrigger bounds) */}
-      <div className="relative z-40 bg-[#0a0a0c]">
+      {/* Standard Flow Document Content (Outside of 600vh ScrollTrigger bounds) */}
+      <div className="relative z-40">
         {/* Advanced Aesthetic About Section */}
         <HomeAbout />
 
