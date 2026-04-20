@@ -7,10 +7,12 @@ import Links from './pages/Links';
 import Uses from './pages/Uses';
 import Achievements from './pages/Achievements';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <TopNav />
       {/* Route mapping */}
       <Routes>
