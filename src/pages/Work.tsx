@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 type Project = {
   title: string;
@@ -50,7 +50,7 @@ export default function Work() {
   const cardRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
   useEffect(() => {
-    const cards = cardRefs.current.filter(Boolean) as HTMLButtonElement[];
+    const cards = cardRefs.current.filter(Boolean) as HTMLAnchorElement[];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -70,7 +70,7 @@ export default function Work() {
   }, []);
 
   const handlePointerMove = (
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
     index: number,
   ) => {
     const card = cardRefs.current[index];
