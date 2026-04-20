@@ -58,3 +58,93 @@ html {
   pointer-events: none;
   z-index: 0;
 }
+
+/* === WORK PAGE PROJECT CARD STYLES === */
+
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 420px;
+  width: 100%;
+  border-radius: 24px;
+  background: var(--project-gradient, #111);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  /* Use GPU accelerated 3D transform using custom properties updated by TS */
+  transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 0.15s linear, box-shadow 0.3s ease, border-color 0.3s ease, opacity 0.8s ease;
+  will-change: transform;
+  text-align: left;
+  opacity: 0;
+}
+
+/* Visibility toggled by IntersectionObserver */
+.project-card--visible {
+  opacity: 1;
+}
+
+.project-card:hover {
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.2);
+  z-index: 10;
+}
+
+/* Base background layer that responds to mouse hover coordinate variables */
+.project-thumb {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.08), transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.project-card:hover .project-thumb {
+  opacity: 1;
+}
+
+/* Bottom shadow to make text readable */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.1) 60%, transparent 100%);
+  pointer-events: none;
+}
+
+/* Rounded tags */
+.tech-pill {
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  text-transform: uppercase;
+}
+
+/* Arrow circle indicator */
+.project-indicator {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  font-family: monospace;
+}
+
+.project-card:hover .project-indicator {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  transform: translate(3px, -3px);
+}
+

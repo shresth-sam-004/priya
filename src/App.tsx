@@ -5,6 +5,7 @@ import About from './pages/About';
 import Work from './pages/Work';
 import Links from './pages/Links';
 import Uses from './pages/Uses';
+import Achievements from './pages/Achievements';
 import Footer from './components/Footer';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/work" element={<Work />} />
         <Route path="/links" element={<Links />} />
         <Route path="/uses" element={<Uses />} />
+        <Route path="/achievements" element={<Achievements />} />
       </Routes>
       <Footer />
     </>

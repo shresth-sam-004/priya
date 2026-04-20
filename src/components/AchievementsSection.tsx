@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const ACHIEVEMENTS = [
   {
@@ -37,6 +38,7 @@ const ACHIEVEMENTS = [
 ];
 
 export default function AchievementsSection() {
+  const navigate = useNavigate();
   return (
     <section className="relative z-40 w-full bg-[#0a0a0c] py-20 md:py-28 px-6 sm:px-10 lg:px-20 border-t border-white/[0.02]">
       <div className="max-w-7xl mx-auto relative z-10">
@@ -96,6 +98,7 @@ export default function AchievementsSection() {
         {/* View All Button */}
         <div className="mt-16 flex justify-center">
           <motion.button
+            onClick={() => navigate('/achievements')}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

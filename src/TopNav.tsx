@@ -6,7 +6,7 @@ const NAV_ITEMS = [
   { id: 'about', label: 'About', path: '/about' },
   { id: 'work', label: 'Work', path: '/work' },
   { id: 'links', label: 'Links', path: '/links' },
-  { id: 'uses', label: 'Uses', path: '/uses' },
+  { id: 'achievements', label: 'Achievements', path: '/achievements' },
 ];
 
 export default function TopNav() {

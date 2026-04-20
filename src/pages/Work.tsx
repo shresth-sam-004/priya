@@ -6,40 +6,48 @@ type Project = {
   tags: string[];
   gradient: string;
   detail: string;
+  imageUrl?: string;
+  link?: string;
 };
 
 const projects: Project[] = [
   {
     title: 'CTF Cryptography Solver',
     description: 'Automates cipher analysis for complex CTF challenge pipelines.',
-    tags: ['Python', 'Web Security', 'Crypto', 'Automation'],
-    gradient: 'linear-gradient(135deg, #101826 0%, #13203d 45%, #2e4f8f 100%)',
+    tags: ['Python', 'Web Sec', 'RSA'],
+    gradient: 'from-blue-900/40 to-black',
     detail:
       'A modular cryptography toolkit with pattern detection, keyspace heuristics, and automated challenge-specific solving strategies.',
+    imageUrl: "", // Add your image path here like "/images/ctf-winner.jpg"
+    link: "", // Add your external link URL here
   },
   {
     title: 'AI Portfolio Generator',
     description: 'Generates polished portfolio sites from prompts and data.',
-    tags: ['React', 'Node.js', 'LLM', 'TypeScript'],
-    gradient: 'linear-gradient(135deg, #1a1124 0%, #221739 45%, #5b2e8f 100%)',
+    tags: ['React', 'Node.js', 'OpenAI'],
+    gradient: 'from-emerald-900/40 to-black',
     detail:
       'A prompt-to-portfolio system that transforms user content into responsive, theme-aware websites with accessible components and animations.',
+    imageUrl: "", 
+    link: "",
   },
   {
     title: 'Secure Login System',
     description: 'Hardened auth flow with threat detection and audit logs.',
-    tags: ['Node.js', 'JWT', '2FA', 'Security'],
-    gradient: 'linear-gradient(135deg, #12201e 0%, #142f2d 40%, #1f7f74 100%)',
+    tags: ['Next.js', 'PostgreSQL', 'Redis'],
+    gradient: 'from-purple-900/40 to-black',
     detail:
       'A production-grade authentication stack featuring adaptive rate limiting, anomaly signals, and privacy-conscious session architecture.',
+    imageUrl: "", 
+    link: "",
   },
 ];
 
 const MAX_TILT = 5;
 
+  // Stack 3 variables eliminated
 export default function Work() {
-  const [activeProject, setActiveProject] = useState<Project | null>(null);
-  const cardRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const cardRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
   useEffect(() => {
     const cards = cardRefs.current.filter(Boolean) as HTMLButtonElement[];
@@ -47,7 +55,8 @@ export default function Work() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('project-card--visible');
+            entry.target.classList.remove('opacity-0', 'translate-y-8');
+            entry.target.classList.add('opacity-100', 'translate-y-0');
             observer.unobserve(entry.target);
           }
         });
@@ -105,71 +114,89 @@ export default function Work() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7 md:gap-8">
           {projects.map((project, index) => (
-            <button
+            <a
               key={project.title}
+              href={project.link || '#'}
+              target="_blank"
+              rel="noopener noreferrer"
               ref={(element) => {
                 cardRefs.current[index] = element;
               }}
-              type="button"
-              className="project-card"
+              className="group relative flex flex-col justify-between overflow-hidden rounded-[32px] bg-[#111113]/40 border border-white/[0.08] p-2 sm:p-2.5 shadow-2xl backdrop-blur-3xl transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] hover:-translate-y-3 hover:shadow-[0_40px_80px_-20px_rgba(255,255,255,0.12)] hover:border-white/20 text-left w-full translate-y-8 opacity-0 focus:outline-none focus:ring-2 focus:ring-white/20"
               style={{
                 transitionDelay: `${index * 120}ms`,
-                '--project-gradient': project.gradient,
               } as React.CSSProperties}
-              onMouseMove={(event) => handlePointerMove(event, index)}
+              onMouseMove={(event) => handlePointerMove(event as any, index)}
               onMouseLeave={() => handlePointerLeave(index)}
-              onClick={() => setActiveProject(project)}
             >
-              <div className="project-thumb" aria-hidden="true" />
-              <div className="project-overlay" aria-hidden="true" />
+              {/* Spotlight Effect element mapped to CSS custom variables */}
+              <div 
+                className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0 rounded-[32px]"
+                style={{
+                  background: 'radial-gradient(800px circle at var(--mx) var(--my), rgba(255,255,255,0.06), transparent 40%)'
+                }}
+              />
 
-              <div className="p-6 md:p-7 relative z-20 text-left">
-                <div className="flex items-start justify-between gap-5 mb-3">
-                  <h2 className="text-xl md:text-2xl font-semibold tracking-tight text-white">{project.title}</h2>
-                  <span className="project-indicator" aria-hidden="true">
-                    ↗
-                  </span>
+              {/* Card Internal Body wrapper to sit above spotlight */}
+              <div className="relative z-10 flex flex-col h-full w-full bg-[#050505]/60 rounded-[22px] sm:rounded-[24px] overflow-hidden backdrop-blur-md border border-white/[0.04]">
+                
+                {/* Thumbnail Area */}
+                <div className="relative h-56 sm:h-64 w-full overflow-hidden flex-shrink-0 border-b border-white/[0.05]">
+                  {project.imageUrl ? (
+                    <img 
+                      src={project.imageUrl} 
+                      alt={project.title} 
+                      className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110 pointer-events-none" 
+                    />
+                  ) : (
+                    <div 
+                      className={`absolute inset-0 bg-gradient-to-br ${project.gradient} transform transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110`} 
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-700 ease-out pointer-events-none" />
                 </div>
 
-                <p className="text-white/70 text-sm md:text-[0.95rem] leading-relaxed mb-6">{project.description}</p>
-
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span key={tag} className="tech-pill">
-                      {tag}
-                    </span>
-                  ))}
+                {/* Content Box */}
+                <div className="flex flex-col flex-1 p-6 sm:p-8 relative">
+                  <div className="flex flex-wrap gap-2 mb-6 sm:mb-8">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/[0.08] text-[10px] md:text-[11px] font-bold tracking-[0.1em] text-white/80 uppercase backdrop-blur-md">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <div className="mt-auto flex items-start justify-between gap-3">
+                    <div>
+                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight group-hover:text-white transition-colors duration-300">
+                        {project.title}
+                      </h3>
+                      <p className="text-sm md:text-base text-white/50 leading-relaxed font-light group-hover:text-white/70 transition-colors duration-500">
+                        {project.description}
+                      </p>
+                    </div>
+                    {project.link && (
+                      <a 
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()} 
+                        className="flex-shrink-0 w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 flex items-center justify-center text-white/50 hover:text-white transition-colors z-20 group/link"
+                        title="Visit Link"
+                      >
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform duration-300">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                      </a>
+                    )}
+                  </div>
                 </div>
+
               </div>
-            </button>
+            </a>
           ))}
         </div>
       </div>
-
-      {activeProject && (
-        <div className="fixed inset-0 z-[120] flex items-center justify-center px-6" role="dialog" aria-modal="true">
-          <div className="absolute inset-0 bg-black/65 backdrop-blur-sm" onClick={() => setActiveProject(null)} />
-          <div className="relative w-full max-w-2xl rounded-3xl p-7 md:p-9 bg-[rgba(12,15,24,0.78)] border border-white/10 shadow-[0_28px_90px_rgba(0,0,0,0.55)] backdrop-blur-2xl">
-            <p className="uppercase tracking-[0.2em] text-xs text-white/45 mb-3">Project Detail</p>
-            <h3 className="text-2xl md:text-3xl font-semibold text-white tracking-tight mb-4">{activeProject.title}</h3>
-            <p className="text-white/75 leading-relaxed mb-7">{activeProject.detail}</p>
-            <div className="flex flex-wrap gap-2 mb-8">
-              {activeProject.tags.map((tag) => (
-                <span key={tag} className="tech-pill">
-                  {tag}
-                </span>
-              ))}
-            </div>
-            <button
-              type="button"
-              onClick={() => setActiveProject(null)}
-              className="rounded-full px-5 py-2.5 text-sm font-medium text-white bg-white/10 hover:bg-white/15 transition-colors duration-300"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
     </section>
   );
 }

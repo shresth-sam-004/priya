@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -37,6 +38,7 @@ const PROJECTS = [
 export default function ProjectShowcase() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLAnchorElement | null)[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -164,7 +166,10 @@ export default function ProjectShowcase() {
 
         {/* Centered View All Button */}
         <div className="mt-16 md:mt-20 flex justify-center w-full">
-          <button className="group flex items-center gap-4 px-8 py-4 rounded-full bg-[#111111] hover:bg-[#1a1a1a] border border-white/[0.08] hover:border-white/[0.15] transition-all duration-300 ease-out hover:shadow-[0_0_20px_rgba(255,255,255,0.03)] hover:-translate-y-1">
+          <button 
+            onClick={() => navigate('/work')}
+            className="group flex items-center gap-4 px-8 py-4 rounded-full bg-[#111111] hover:bg-[#1a1a1a] border border-white/[0.08] hover:border-white/[0.15] transition-all duration-300 ease-out hover:shadow-[0_0_20px_rgba(255,255,255,0.03)] hover:-translate-y-1"
+          >
             <span className="uppercase tracking-[0.15em] text-sm font-bold text-white/90">View All Projects</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white/90 transform group-hover:translate-x-1 transition-transform duration-300">
               <path d="M5 12h14M12 5l7 7-7 7"/>
