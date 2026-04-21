@@ -8,30 +8,27 @@ gsap.registerPlugin(ScrollTrigger);
 const PROJECTS = [
   {
     id: 1,
-    title: 'CTF Cryptography Solver',
-    description: 'Automated cryptographic vulnerability analysis toolkit.',
-    tech: ['Python', 'Web Sec', 'RSA'],
+    title: 'Pixelary',
+    description: '🚀A modern design-and-development studio website built to showcase the intersection of thoughtful design and solid engineering. Pixelary presents a clean, product-first digital experience that emphasizes clarity, performance, and scalability—crafted for brands that value execution as much as aesthetics.',
     gradient: 'from-blue-900/40 to-black',
-    imageUrl: '', // <-- Add your image path here (e.g., '/projects/ctf.png')
-    link: '#',    // <-- Add your project URL here
+    imageUrl: 'pixelary.png', // <-- Add your image path here (e.g., '/projects/ctf.png')
+    link: 'https://pixelary-studio.vercel.app',    // <-- Add your project URL here
   },
   {
     id: 2,
-    title: 'AI Portfolio Generator',
-    description: 'LLM-driven system designing dynamic aesthetic portfolios.',
-    tech: ['React', 'Node.js', 'OpenAI'],
+    title: 'Dodge Challenger',
+    description: '🚀A high-octane digital tribute to the legendary Dodge Challenger. This immersive website captures the raw power and aggressive design of the American muscle icon, featuring stunning visuals, detailed performance specs, and a smooth user experience that feels as fast as the car itself.',
     gradient: 'from-emerald-900/40 to-black',
-    imageUrl: '', 
-    link: '#',
+    imageUrl: 'dodge_challenger.png', 
+    link: 'https://dodgechallanger.in/',
   },
   {
     id: 3,
-    title: 'Secure Login System',
-    description: 'Zero-trust authentication and advanced rate limiting.',
-    tech: ['Next.js', 'PostgreSQL', 'Redis'],
+    title: 'Elyaitra',
+    description: '🚀Elyaitra is an AI-powered exam-focused learning platform built to help students study smarter, faster, and with absolute clarity. Designed around college syllabi and real exam needs, Elyaitra delivers precise explanations, targeted preparation, and distraction-free learning—so students focus only on what truly matters for marks.',
     gradient: 'from-purple-900/40 to-black',
-    imageUrl: '', 
-    link: '#',
+    imageUrl: 'elyaitra.png', 
+    link: 'https://www.elyaitra.com/',
   },
 ];
 
@@ -141,13 +138,7 @@ export default function ProjectShowcase() {
 
                 {/* Content Box */}
                 <div className="flex flex-col flex-1 p-6 sm:p-8 relative">
-                  <div className="flex flex-wrap gap-2 mb-6 sm:mb-8">
-                    {project.tech.map((tag) => (
-                      <span key={tag} className="px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/[0.08] text-[10px] md:text-[11px] font-bold tracking-[0.1em] text-white/80 uppercase backdrop-blur-md">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                  {/* Space where tech tags used to be */}
                   
                   <div className="mt-auto">
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight group-hover:text-white transition-colors duration-300">

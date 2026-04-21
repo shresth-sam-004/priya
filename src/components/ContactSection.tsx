@@ -5,7 +5,7 @@ const ContactSection = () => {
 
   const handleCopyEmail = (e: React.MouseEvent) => {
     e.preventDefault();
-    navigator.clipboard.writeText('hello@ashutosh.com'); // Replace with actual email
+    navigator.clipboard.writeText('ashutoshpatel0044@gmail.com');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -30,7 +30,7 @@ const ContactSection = () => {
         
         {/* Email Card (Copy Action) */}
         <a 
-          href="mailto:hello@ashutosh.com"
+          href="mailto:ashutoshpatel0044@gmail.com"
           onClick={handleCopyEmail}
           className="group relative flex flex-col items-start p-6 rounded-[16px] bg-white/[0.03] border border-white/[0.08] backdrop-blur-md transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/[0.05] hover:border-white/[0.15]"
         >
@@ -45,14 +45,14 @@ const ContactSection = () => {
           <div className="flex flex-col text-left">
             <span className="text-sm font-medium text-white/50 mb-1">Email</span>
             <span className="text-base font-semibold text-white tracking-wide">
-              {copied ? 'Email Copied!' : 'hello@ashu.com'}
+              {copied ? 'Email Copied!' : 'ashutoshpatel0044@gmail.com'}
             </span>
           </div>
         </a>
 
         {/* GitHub Card */}
         <a 
-          href="https://github.com/yourname"
+          href="https://github.com/Ashu8810"
           target="_blank"
           rel="noopener noreferrer"
           className="group relative flex flex-col items-start p-6 rounded-[16px] bg-white/[0.03] border border-white/[0.08] backdrop-blur-md transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/[0.05] hover:border-white/[0.15]"
@@ -67,13 +67,13 @@ const ContactSection = () => {
           </div>
           <div className="flex flex-col text-left">
             <span className="text-sm font-medium text-white/50 mb-1">GitHub</span>
-            <span className="text-base font-semibold text-white tracking-wide">github.com/ashu</span>
+            <span className="text-base font-semibold text-white tracking-wide">github.com/Ashu8810</span>
           </div>
         </a>
 
         {/* LinkedIn Card */}
         <a 
-          href="https://linkedin.com/in/yourname"
+          href="https://www.linkedin.com/in/ashutosh-patel2901/"
           target="_blank"
           rel="noopener noreferrer"
           className="group relative flex flex-col items-start p-6 rounded-[16px] bg-white/[0.03] border border-white/[0.08] backdrop-blur-md transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/[0.05] hover:border-white/[0.15]"
@@ -88,13 +88,13 @@ const ContactSection = () => {
           </div>
           <div className="flex flex-col text-left">
             <span className="text-sm font-medium text-white/50 mb-1">LinkedIn</span>
-            <span className="text-base font-semibold text-white tracking-wide">/in/ashu</span>
+            <span className="text-base font-semibold text-white tracking-wide">in/ashutosh-patel2901</span>
           </div>
         </a>
 
         {/* Instagram Card */}
         <a 
-          href="https://instagram.com/yourname"
+          href="https://www.instagram.com/_ashu_h3r3/"
           target="_blank"
           rel="noopener noreferrer"
           className="group relative flex flex-col items-start p-6 rounded-[16px] bg-white/[0.03] border border-white/[0.08] backdrop-blur-md transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/[0.05] hover:border-white/[0.15]"
@@ -109,7 +109,7 @@ const ContactSection = () => {
           </div>
           <div className="flex flex-col text-left">
             <span className="text-sm font-medium text-white/50 mb-1">Instagram</span>
-            <span className="text-base font-semibold text-white tracking-wide">@ashu</span>
+            <span className="text-base font-semibold text-white tracking-wide">@_ashu_h3r3</span>
           </div>
         </a>
 

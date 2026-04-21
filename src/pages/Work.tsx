@@ -3,7 +3,6 @@ import { useEffect, useRef } from 'react';
 type Project = {
   title: string;
   description: string;
-  tags: string[];
   gradient: string;
   detail: string;
   imageUrl?: string;
@@ -12,35 +11,57 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: 'CTF Cryptography Solver',
-    description: 'Automates cipher analysis for complex CTF challenge pipelines.',
-    tags: ['Python', 'Web Sec', 'RSA'],
+    title: 'Pixelary',
+    description: '🚀A modern design-and-development studio website built to showcase the intersection of thoughtful design and solid engineering. Pixelary presents a clean, product-first digital experience that emphasizes clarity, performance, and scalability—crafted for brands that value execution as much as aesthetics.',
     gradient: 'from-blue-900/40 to-black',
     detail:
-      'A modular cryptography toolkit with pattern detection, keyspace heuristics, and automated challenge-specific solving strategies.',
-    imageUrl: "", // Add your image path here like "/images/ctf-winner.jpg"
-    link: "", // Add your external link URL here
+      '',
+    imageUrl: "pixelary.png", // Add your image path here like "/images/ctf-winner.jpg"
+    link: "https://pixelary-studio.vercel.app", // Add your external link URL here
   },
   {
-    title: 'AI Portfolio Generator',
-    description: 'Generates polished portfolio sites from prompts and data.',
-    tags: ['React', 'Node.js', 'OpenAI'],
+    title: 'Dodge Challenger',
+    description: 'A high-octane digital tribute to the legendary Dodge Challenger. This immersive website captures the raw power and aggressive design of the American muscle icon, featuring stunning visuals, detailed performance specs, and a smooth user experience that feels as fast as the car itself.',
     gradient: 'from-emerald-900/40 to-black',
     detail:
-      'A prompt-to-portfolio system that transforms user content into responsive, theme-aware websites with accessible components and animations.',
-    imageUrl: "", 
-    link: "",
+      '',
+    imageUrl: "dodge_challenger.png", 
+    link: 'https://dodgechallanger.in',
   },
   {
-    title: 'Secure Login System',
-    description: 'Hardened auth flow with threat detection and audit logs.',
-    tags: ['Next.js', 'PostgreSQL', 'Redis'],
+    title: 'Elyaitra',
+    description: 'Elyaitra is an AI-powered exam-focused learning platform built to help students study smarter, faster, and with absolute clarity. Designed around college syllabi and real exam needs, Elyaitra delivers precise explanations, targeted preparation, and distraction-free learning—so students focus only on what truly matters for marks.',
     gradient: 'from-purple-900/40 to-black',
     detail:
-      'A production-grade authentication stack featuring adaptive rate limiting, anomaly signals, and privacy-conscious session architecture.',
-    imageUrl: "", 
+      '',
+    imageUrl: "elyaitra.png", 
+    link: "https://www.elyaitra.com",
+  },
+  {
+    title: 'Smart Hostel Mess Management System',
+    description: 'Smart Hostel Mess is a modern, digital solution for efficient hostel mess operations that reduces food waste, eliminates long queues, and delivers real-time insights for students, staff, and administrators. Built to streamline mess workflows, enhance transparency, and optimize resource planning on campus, it transforms the mess experience for every stakeholder.',
+    gradient: 'from-blue-900/40 to-black',
+    detail: '',
+    imageUrl: "smart_mess.png", 
+    link: "https://smarthostelmess.vercel.app/",
+  },
+  {
+    title: 'Lab Portfolio',
+    description: 'A modern, interactive portfolio designed to showcase projects, achievements, and technical expertise through clean UI and immersive user experiences. Built with a focus on performance, minimal design, and smooth interactions, it reflects a design-driven development approach while presenting work in a structured and impactful way.',
+    gradient: 'from-blue-900/40 to-black',
+    detail: '',
+    imageUrl: "lab_ashu.png", 
     link: "",
   },
+  // {
+  //   title: '',
+  //   description: '',
+  //   tags: ['Python', 'Web Sec', 'RSA'],
+  //   gradient: 'from-blue-900/40 to-black',
+  //   detail: '',
+  //   imageUrl: "", 
+  //   link: "",
+  // },
 ];
 
 const MAX_TILT = 5;
@@ -158,13 +179,7 @@ export default function Work() {
 
                 {/* Content Box */}
                 <div className="flex flex-col flex-1 p-6 sm:p-8 relative">
-                  <div className="flex flex-wrap gap-2 mb-6 sm:mb-8">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/[0.08] text-[10px] md:text-[11px] font-bold tracking-[0.1em] text-white/80 uppercase backdrop-blur-md">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                  {/* Space where tags used to be */}
                   
                   <div className="mt-auto flex items-start justify-between gap-3">
                     <div>

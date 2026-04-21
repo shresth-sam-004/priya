@@ -1,13 +1,32 @@
+import AntigravitySection from '../components/AntigravitySection';
+
 export default function About() {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center relative pt-24 pb-12 overflow-hidden">
-      <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none"></div>
-      <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6">About Me</h1>
-        <p className="text-lg md:text-xl text-white/70 leading-relaxed font-light">
-          This is the new dedicated About page. Feel free to fill this with relevant information.
-        </p>
-      </div>
+    <div className="bg-black min-h-screen">
+      <AntigravitySection />
+      
+      {/* Optional additional content section to provide context */}
+      <section className="py-32 px-6 bg-black relative z-10">
+        <div className="max-w-4xl mx-auto border-t border-white/10 pt-20">
+          <div className="grid md:grid-cols-2 gap-20">
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-6">The Philosophy</h3>
+              <p className="text-white/50 leading-relaxed font-light">
+                I believe that digital interfaces should be more than just functional—they should be ethereal. 
+                By combining physical intuition with digital freedom, I create systems that feel as natural as gravity yet as boundless as space.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-6">Technical Edge</h3>
+              <p className="text-white/50 leading-relaxed font-light">
+                From performance-critical backend architectures to high-end CSS animations, 
+                my work is built on a foundation of clean code and relentless optimization.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
+

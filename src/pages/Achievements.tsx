@@ -17,92 +17,94 @@ const ACHIEVEMENT_STACKS: Achievement[][] = [
   [
     {
       id: "a1",
-      title: "CTF Winner",
-      date: "April 2026",
-      description: "Secured 1st place in a competitive cybersecurity CTF event focusing on cryptography and logic.",
+      title: "CryptNite",
+      date: "March 27th 2026",
+      description: "Secured 2nd Runner Up in a competitive cybersecurity CTF event. Hosted by Manipal Bengaluru.",
       gradient: "from-blue-900/40 to-black",
-      imageUrl: "", // Add your image path here like "/images/ctf-winner.jpg"
-      link: "", // Add your LinkedIn post URL here
+      imageUrl: "CryptNite.jpg", // Add your image path here like "/images/ctf-winner.jpg"
+      link: "https://www.linkedin.com/posts/ashutosh-patel2901_cybersecurity-ctf-blueteam-activity-7445431384493531136-mfBb?utm_source=share&utm_medium=member_ios&rcm=ACoAAFkaWGkB3wL3JTBdAM1mAlmr1PCcLRS_qcA", // Add your LinkedIn post URL here
     },
     {
       id: "a2",
-      title: "Top Open Source Contributor",
-      date: "Feb 2026",
-      description: "Recognized as a leading contributor to major React security libraries.",
+      title: "CryptNite",
+      date: "March 27th 2026",
+      description: "The finals were conducted in collaboration with SentinelOne, a global leader in AI-powered cybersecurity and autonomous threat detection.",
       gradient: "from-purple-900/40 to-black",
-      imageUrl: "",
-      link: "",
+      imageUrl: "Cryptnite2.jpg",
+      link: "https://www.linkedin.com/posts/ashutosh-patel2901_cybersecurity-ctf-blueteam-activity-7445431384493531136-mfBb?utm_source=share&utm_medium=member_ios&rcm=ACoAAFkaWGkB3wL3JTBdAM1mAlmr1PCcLRS_qcA",
     },
-    {
-      id: "a3",
-      title: "DefCon Speaker",
-      date: "August 2025",
-      description: "Delivered a keynote on next-generation cryptographic vulnerabilities.",
-      gradient: "from-red-900/40 to-black",
-      imageUrl: "",
-      link: "",
-    }
+    // {
+    //   id: "a3",
+    //   title: "DefCoden Speaker",
+    //   date: "August 2025",
+    //   description: "Delivered a keynote on next-generation cryptographic vulnerabilities.",
+    //   gradient: "from-red-900/40 to-black",
+    //   imageUrl: "",
+    //   link: "",
+    // }
   ],
   // Stack 2
   [
     {
       id: "b1",
-      title: "Hackathon Champion",
-      date: "March 2026",
-      description: "Built an AI-driven malware detection engine in 48 hours.",
+      title: "𝐕𝐮𝐥𝐧𝐗 𝐂𝐓𝐅",
+      date: "April 9th 2026",
+      description: "Secured 3rd place 🥉 at 𝐙𝐞𝐫𝐨 𝐃𝐚𝐲 𝐀𝐫𝐞𝐧𝐚 (𝐕𝐮𝐥𝐧𝐗 𝐂𝐓𝐅) conducted by RNS Institute of Technology ",
       gradient: "from-emerald-900/40 to-black",
-      imageUrl: "",
-      link: "",
+      imageUrl: "vulnX.JPG",
+      link: "https://www.linkedin.com/posts/ashutosh-patel2901_secured-3%F0%9D%90%AB%F0%9D%90%9D-%F0%9D%90%A9%F0%9D%90%A5%F0%9D%90%9A%F0%9D%90%9C%F0%9D%90%9E-at-%F0%9D%90%99%F0%9D%90%9E%F0%9D%90%AB%F0%9D%90%A8-%F0%9D%90%83%F0%9D%90%9A%F0%9D%90%B2-activity-7448587088158986240-6uTq?utm_source=share&utm_medium=member_ios&rcm=ACoAAFkaWGkB3wL3JTBdAM1mAlmr1PCcLRS_qcA",
     },
     {
       id: "b2",
-      title: "AWS Certified Security",
-      date: "Jan 2026",
-      description: "Achieved the highest level of AWS Security Specialty certification.",
+      title: "𝐕𝐮𝐥𝐧𝐗 𝐂𝐓𝐅",
+      date: "April 9th 2026",
+      description: "The competition followed a Jeopardy-style format with challenges across Crypto, Reverse Engineering, Forensics, Web, OSINT, and Pwn.",
       gradient: "from-orange-900/40 to-black",
-      imageUrl: "",
-      link: "",
+      imageUrl: "vuluX2.jpg",
+      link: "https://www.linkedin.com/posts/ashutosh-patel2901_secured-3%F0%9D%90%AB%F0%9D%90%9D-%F0%9D%90%A9%F0%9D%90%A5%F0%9D%90%9A%F0%9D%90%9C%F0%9D%90%9E-at-%F0%9D%90%99%F0%9D%90%9E%F0%9D%90%AB%F0%9D%90%A8-%F0%9D%90%83%F0%9D%90%9A%F0%9D%90%B2-activity-7448587088158986240-6uTq?utm_source=share&utm_medium=member_ios&rcm=ACoAAFkaWGkB3wL3JTBdAM1mAlmr1PCcLRS_qcA",
     },
-    {
-      id: "b3",
-      title: "Published Researcher",
-      date: "Oct 2025",
-      description: "Co-authored a paper on Zero-Trust Architecture in cloud native environments.",
-      gradient: "from-blue-900/40 to-black",
-      imageUrl: "",
-      link: "",
-    }
+    // {
+    //   id: "b3",
+    //   title: "Published Researcher",
+    //   date: "Oct 2025",
+    //   description: "Co-authored a paper on Zero-Trust Architecture in cloud native environments.",
+    //   gradient: "from-blue-900/40 to-black",
+    //   imageUrl: "",
+    //   link: "",
+    // }
   ],
   // Stack 3
   [
     {
       id: "c1",
-      title: "Awwwards Site of the Day",
-      date: "May 2026",
-      description: "Awarded SOTD for a highly interactive and secure fintech dashboard.",
+      title: "𝐓𝐞𝐜𝐡 𝐓𝐫𝐢𝐚𝐥𝐬",
+      date: "April 11th 2026",
+      description: "𝗦𝗲𝗰𝘂𝗿𝗲𝗱 𝟭𝘀𝘁 𝗣𝗹𝗮𝗰𝗲 🥇 at 𝐓𝐞𝐜𝐡 𝐓𝐫𝐢𝐚𝐥𝐬: 𝐌𝐮𝐥𝐭𝐢𝐯𝐞𝐫𝐬𝐞 𝐇𝐞𝐢𝐬𝐭 (𝐂𝐓𝐅) conducted during 𝗨𝘁𝘀𝗮𝗵𝗮 𝗩𝗮𝗶𝗯𝗵𝗮𝘃𝗮 by the 𝗔𝗰𝗰𝗲𝘀𝘀 𝗗𝗲𝗻𝗶𝗲𝗱 𝗖𝗹𝘂𝗯, BMSIT.",
       gradient: "from-pink-900/40 to-black",
-      imageUrl: "",
-      link: "",
+      imageUrl: "Access_denied.JPG",
+      link: "https://www.linkedin.com/posts/ashutosh-patel2901_ctf-cybersecurity-1stplace-ugcPost-7451904350118969344-rVwD?utm_source=share&utm_medium=member_ios&rcm=ACoAAFkaWGkB3wL3JTBdAM1mAlmr1PCcLRS_qcA",
     },
     {
       id: "c2",
-      title: "Bug Bounty Elite",
-      date: "Dec 2025",
-      description: "Acknowledged by 5 major tech companies in their security Hall of Fame.",
+      title: "𝐓𝐞𝐜𝐡 𝐓𝐫𝐢𝐚𝐥𝐬",
+      date: "April 11th 2026",
+      description: "The event tested speed, accuracy, and critical thinking under pressure",
       gradient: "from-yellow-900/40 to-black",
-      imageUrl: "",
-      link: "",
+      imageUrl: "Access_denied2.jpg",
+      link: "https://www.linkedin.com/posts/ashutosh-patel2901_ctf-cybersecurity-1stplace-ugcPost-7451904350118969344-rVwD?utm_source=share&utm_medium=member_ios&rcm=ACoAAFkaWGkB3wL3JTBdAM1mAlmr1PCcLRS_qcA",
     },
-    {
-      id: "c3",
-      title: "UI/UX Excellence",
-      date: "Sept 2025",
-      description: "Won the national design challenge for accessibility and secure design patterns.",
-      gradient: "from-teal-900/40 to-black",
-      imageUrl: "",
-      link: "",
-    }
+    // {
+    //   id: "c3",
+    //   title: "UI/UX Excellence",
+    //   date: "Sept 2025",
+    //   description: "Won the national design challenge for accessibility and secure design patterns.",
+    //   gradient: "from-teal-900/40 to-black",
+    //   imageUrl: "",
+    //   link: "",
+    // }
   ]
+  // Stack 4
+  
 ];
 
 const AchievementCard = ({ 

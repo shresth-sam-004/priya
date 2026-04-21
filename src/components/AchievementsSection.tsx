@@ -4,36 +4,36 @@ import { useNavigate } from 'react-router-dom';
 const ACHIEVEMENTS = [
   {
     id: 1,
-    title: '1st Place – Tech Trials CTF',
-    description: 'Solved cryptography challenges under strict time constraints.',
+    title: '3× CTF Winner 🥇',
+    description: 'Demonstrated consistent performance by solving advanced cryptographic and logical challenges under intense time pressure.',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
       </svg>
     ),
-    year: '2025'
+    year: '2026'
   },
   {
     id: 2,
-    title: 'Top Performer – Security',
-    description: 'Demonstrated strong problem-solving and logic engineering skills.',
+    title: 'Full-Stack Developer',
+    description: 'Building scalable, high-performance web applications with clean and modern architecture.',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
       </svg>
     ),
-    year: '2024'
+    year: '2025'
   },
   {
     id: 3,
-    title: 'Hackathon Finalist',
-    description: 'Built and presented a functional security prototype under pressure.',
+    title: 'Design-Driven Approach',
+    description: 'Blending aesthetics with logic to create intuitive and impactful interfaces.',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
       </svg>
     ),
-    year: '2024'
+    year: '2025'
   }
 ];
 
