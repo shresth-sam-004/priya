@@ -16,7 +16,7 @@ const projects: Project[] = [
     gradient: 'from-blue-900/40 to-black',
     detail:
       '',
-    imageUrl: "pixelary.png", // Add your image path here like "/images/ctf-winner.jpg"
+    imageUrl: "/pixelary.png", // Add your image path here like "/images/ctf-winner.jpg"
     link: "https://pixelary-studio.vercel.app", // Add your external link URL here
   },
   {
@@ -25,7 +25,7 @@ const projects: Project[] = [
     gradient: 'from-emerald-900/40 to-black',
     detail:
       '',
-    imageUrl: "dodge_challenger.png", 
+    imageUrl: "/dodge_challenger.png", 
     link: 'https://dodgechallanger.in',
   },
   {
@@ -34,7 +34,7 @@ const projects: Project[] = [
     gradient: 'from-purple-900/40 to-black',
     detail:
       '',
-    imageUrl: "elyaitra.png", 
+    imageUrl: "/elyaitra.png", 
     link: "https://www.elyaitra.com",
   },
   {
@@ -42,7 +42,7 @@ const projects: Project[] = [
     description: 'Smart Hostel Mess is a modern, digital solution for efficient hostel mess operations that reduces food waste, eliminates long queues, and delivers real-time insights for students, staff, and administrators. Built to streamline mess workflows, enhance transparency, and optimize resource planning on campus, it transforms the mess experience for every stakeholder.',
     gradient: 'from-blue-900/40 to-black',
     detail: '',
-    imageUrl: "smart_mess.png", 
+    imageUrl: "/smart_mess.png", 
     link: "https://smarthostelmess.vercel.app/",
   },
   {
@@ -50,7 +50,7 @@ const projects: Project[] = [
     description: 'A modern, interactive portfolio designed to showcase projects, achievements, and technical expertise through clean UI and immersive user experiences. Built with a focus on performance, minimal design, and smooth interactions, it reflects a design-driven development approach while presenting work in a structured and impactful way.',
     gradient: 'from-blue-900/40 to-black',
     detail: '',
-    imageUrl: "lab_ashu.png", 
+    imageUrl: "/lab_ashu.png", 
     link: "",
   },
   // {

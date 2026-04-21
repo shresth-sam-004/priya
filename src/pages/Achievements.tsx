@@ -21,7 +21,7 @@ const ACHIEVEMENT_STACKS: Achievement[][] = [
       date: "March 27th 2026",
       description: "Secured 2nd Runner Up in a competitive cybersecurity CTF event. Hosted by Manipal Bengaluru.",
       gradient: "from-blue-900/40 to-black",
-      imageUrl: "CryptNite.jpg", // Add your image path here like "/images/ctf-winner.jpg"
+      imageUrl: "/CryptNite.jpg", // Add your image path here like "/images/ctf-winner.jpg"
       link: "https://www.linkedin.com/posts/ashutosh-patel2901_cybersecurity-ctf-blueteam-activity-7445431384493531136-mfBb?utm_source=share&utm_medium=member_ios&rcm=ACoAAFkaWGkB3wL3JTBdAM1mAlmr1PCcLRS_qcA", // Add your LinkedIn post URL here
     },
     {
@@ -30,7 +30,7 @@ const ACHIEVEMENT_STACKS: Achievement[][] = [
       date: "March 27th 2026",
       description: "The finals were conducted in collaboration with SentinelOne, a global leader in AI-powered cybersecurity and autonomous threat detection.",
       gradient: "from-purple-900/40 to-black",
-      imageUrl: "Cryptnite2.jpg",
+      imageUrl: "/Cryptnite2.jpg",
       link: "https://www.linkedin.com/posts/ashutosh-patel2901_cybersecurity-ctf-blueteam-activity-7445431384493531136-mfBb?utm_source=share&utm_medium=member_ios&rcm=ACoAAFkaWGkB3wL3JTBdAM1mAlmr1PCcLRS_qcA",
     },
     // {
@@ -51,7 +51,7 @@ const ACHIEVEMENT_STACKS: Achievement[][] = [
       date: "April 9th 2026",
       description: "Secured 3rd place 🥉 at 𝐙𝐞𝐫𝐨 𝐃𝐚𝐲 𝐀𝐫𝐞𝐧𝐚 (𝐕𝐮𝐥𝐧𝐗 𝐂𝐓𝐅) conducted by RNS Institute of Technology ",
       gradient: "from-emerald-900/40 to-black",
-      imageUrl: "vulnX.JPG",
+      imageUrl: "/vulnX.JPG",
       link: "https://www.linkedin.com/posts/ashutosh-patel2901_secured-3%F0%9D%90%AB%F0%9D%90%9D-%F0%9D%90%A9%F0%9D%90%A5%F0%9D%90%9A%F0%9D%90%9C%F0%9D%90%9E-at-%F0%9D%90%99%F0%9D%90%9E%F0%9D%90%AB%F0%9D%90%A8-%F0%9D%90%83%F0%9D%90%9A%F0%9D%90%B2-activity-7448587088158986240-6uTq?utm_source=share&utm_medium=member_ios&rcm=ACoAAFkaWGkB3wL3JTBdAM1mAlmr1PCcLRS_qcA",
     },
     {
@@ -60,7 +60,7 @@ const ACHIEVEMENT_STACKS: Achievement[][] = [
       date: "April 9th 2026",
       description: "The competition followed a Jeopardy-style format with challenges across Crypto, Reverse Engineering, Forensics, Web, OSINT, and Pwn.",
       gradient: "from-orange-900/40 to-black",
-      imageUrl: "vuluX2.jpg",
+      imageUrl: "/vuluX2.jpg",
       link: "https://www.linkedin.com/posts/ashutosh-patel2901_secured-3%F0%9D%90%AB%F0%9D%90%9D-%F0%9D%90%A9%F0%9D%90%A5%F0%9D%90%9A%F0%9D%90%9C%F0%9D%90%9E-at-%F0%9D%90%99%F0%9D%90%9E%F0%9D%90%AB%F0%9D%90%A8-%F0%9D%90%83%F0%9D%90%9A%F0%9D%90%B2-activity-7448587088158986240-6uTq?utm_source=share&utm_medium=member_ios&rcm=ACoAAFkaWGkB3wL3JTBdAM1mAlmr1PCcLRS_qcA",
     },
     // {
@@ -81,7 +81,7 @@ const ACHIEVEMENT_STACKS: Achievement[][] = [
       date: "April 11th 2026",
       description: "𝗦𝗲𝗰𝘂𝗿𝗲𝗱 𝟭𝘀𝘁 𝗣𝗹𝗮𝗰𝗲 🥇 at 𝐓𝐞𝐜𝐡 𝐓𝐫𝐢𝐚𝐥𝐬: 𝐌𝐮𝐥𝐭𝐢𝐯𝐞𝐫𝐬𝐞 𝐇𝐞𝐢𝐬𝐭 (𝐂𝐓𝐅) conducted during 𝗨𝘁𝘀𝗮𝗵𝗮 𝗩𝗮𝗶𝗯𝗵𝗮𝘃𝗮 by the 𝗔𝗰𝗰𝗲𝘀𝘀 𝗗𝗲𝗻𝗶𝗲𝗱 𝗖𝗹𝘂𝗯, BMSIT.",
       gradient: "from-pink-900/40 to-black",
-      imageUrl: "Access_denied.JPG",
+      imageUrl: "/Access_denied.JPG",
       link: "https://www.linkedin.com/posts/ashutosh-patel2901_ctf-cybersecurity-1stplace-ugcPost-7451904350118969344-rVwD?utm_source=share&utm_medium=member_ios&rcm=ACoAAFkaWGkB3wL3JTBdAM1mAlmr1PCcLRS_qcA",
     },
     {
@@ -90,7 +90,7 @@ const ACHIEVEMENT_STACKS: Achievement[][] = [
       date: "April 11th 2026",
       description: "The event tested speed, accuracy, and critical thinking under pressure",
       gradient: "from-yellow-900/40 to-black",
-      imageUrl: "Access_denied2.jpg",
+      imageUrl: "/Access_denied2.jpg",
       link: "https://www.linkedin.com/posts/ashutosh-patel2901_ctf-cybersecurity-1stplace-ugcPost-7451904350118969344-rVwD?utm_source=share&utm_medium=member_ios&rcm=ACoAAFkaWGkB3wL3JTBdAM1mAlmr1PCcLRS_qcA",
     },
     // {

@@ -11,7 +11,7 @@ const PROJECTS = [
     title: 'Pixelary',
     description: '🚀A modern design-and-development studio website built to showcase the intersection of thoughtful design and solid engineering. Pixelary presents a clean, product-first digital experience that emphasizes clarity, performance, and scalability—crafted for brands that value execution as much as aesthetics.',
     gradient: 'from-blue-900/40 to-black',
-    imageUrl: 'pixelary.png', // <-- Add your image path here (e.g., '/projects/ctf.png')
+    imageUrl: '/pixelary.png', // <-- Add your image path here (e.g., '/projects/ctf.png')
     link: 'https://pixelary-studio.vercel.app',    // <-- Add your project URL here
   },
   {
@@ -19,7 +19,7 @@ const PROJECTS = [
     title: 'Dodge Challenger',
     description: '🚀A high-octane digital tribute to the legendary Dodge Challenger. This immersive website captures the raw power and aggressive design of the American muscle icon, featuring stunning visuals, detailed performance specs, and a smooth user experience that feels as fast as the car itself.',
     gradient: 'from-emerald-900/40 to-black',
-    imageUrl: 'dodge_challenger.png', 
+    imageUrl: '/dodge_challenger.png', 
     link: 'https://dodgechallanger.in/',
   },
   {
@@ -27,7 +27,7 @@ const PROJECTS = [
     title: 'Elyaitra',
     description: '🚀Elyaitra is an AI-powered exam-focused learning platform built to help students study smarter, faster, and with absolute clarity. Designed around college syllabi and real exam needs, Elyaitra delivers precise explanations, targeted preparation, and distraction-free learning—so students focus only on what truly matters for marks.',
     gradient: 'from-purple-900/40 to-black',
-    imageUrl: 'elyaitra.png', 
+    imageUrl: '/elyaitra.png', 
     link: 'https://www.elyaitra.com/',
   },
 ];
