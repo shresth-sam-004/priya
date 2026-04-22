@@ -1,19 +1,17 @@
 import { Routes, Route } from 'react-router-dom';
-import TopNav from './TopNav';
 import Home from './pages/Home';
 import About from './pages/About';
 import Work from './pages/Work';
 import Links from './pages/Links';
 import Uses from './pages/Uses';
 import Achievements from './pages/Achievements';
-import Footer from './components/Footer';
+
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <>
       <ScrollToTop />
-      <TopNav />
       {/* Route mapping */}
       <Routes>
         <Route path="/" element={<Home />} />
@@ -23,7 +21,6 @@ function App() {
         <Route path="/uses" element={<Uses />} />
         <Route path="/achievements" element={<Achievements />} />
       </Routes>
-      <Footer />
     </>
   );
 }

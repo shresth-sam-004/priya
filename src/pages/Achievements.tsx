@@ -104,19 +104,19 @@ const ACHIEVEMENT_STACKS: Achievement[][] = [
     // }
   ]
   // Stack 4
-  
+
 ];
 
-const AchievementCard = ({ 
-  card, 
-  isTop, 
-  index, 
-  onSwipe 
-}: { 
-  card: Achievement, 
-  isTop: boolean, 
-  index: number, 
-  onSwipe: () => void 
+const AchievementCard = ({
+  card,
+  isTop,
+  index,
+  onSwipe
+}: {
+  card: Achievement,
+  isTop: boolean,
+  index: number,
+  onSwipe: () => void
 }) => {
   const x = useMotionValue(0);
   const rotate = useTransform(x, [-200, 200], [-10, 10]);
@@ -151,10 +151,10 @@ const AchievementCard = ({
     >
       <div className="relative h-44 w-full overflow-hidden flex-shrink-0 border-b border-white/[0.05]">
         {card.imageUrl ? (
-          <img 
-            src={card.imageUrl} 
-            alt={card.title} 
-            className="absolute inset-0 w-full h-full object-cover pointer-events-none" 
+          <img
+            src={card.imageUrl}
+            alt={card.title}
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
           />
         ) : (
           <div className={`absolute inset-0 bg-gradient-to-br ${card.gradient}`} />
@@ -165,7 +165,7 @@ const AchievementCard = ({
         <div className="flex items-start justify-between gap-3 mb-2">
           <h3 className="text-xl font-bold text-white tracking-tight">{card.title}</h3>
           {card.link && (
-            <a 
+            <a
               href={card.link}
               target="_blank"
               rel="noopener noreferrer"
@@ -206,16 +206,16 @@ const SwipeableCardStack = ({ initialCards }: { initialCards: Achievement[] }) =
       {[...cards].map((card, index) => {
         const isTop = index === 0;
         return (
-          <AchievementCard 
-            key={card.id} 
-            card={card} 
-            isTop={isTop} 
-            index={index} 
-            onSwipe={handleSwipe} 
+          <AchievementCard
+            key={card.id}
+            card={card}
+            isTop={isTop}
+            index={index}
+            onSwipe={handleSwipe}
           />
         );
       }).reverse()}
-      
+
       {/* Visual Instruction under the stack */}
       <div className="absolute -bottom-10 left-0 right-0 text-center opacity-40 text-xs tracking-widest uppercase font-semibold pointer-events-none">
         Swipe <span className="inline-block mx-1">↔</span> To Explore
@@ -227,22 +227,22 @@ const SwipeableCardStack = ({ initialCards }: { initialCards: Achievement[] }) =
 export default function Achievements() {
   return (
     <div className="min-h-screen bg-[#050505] text-white pt-32 pb-20 px-6 sm:px-10 lg:px-20 relative z-40 overflow-hidden">
-      
+
       {/* Background noise effect */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.02]" style={{ backgroundImage: 'url("https://grainy-gradients.vercel.app/noise.svg")' }}></div>
       <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         <header className="mb-24 text-center md:text-left">
           <p className="text-white/50 uppercase tracking-[0.22em] text-xs md:text-sm mb-4">Milestones</p>
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-bold tracking-tight mb-6"
           >
             All Achievements.
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -253,7 +253,7 @@ export default function Achievements() {
         </header>
 
         {/* Swipeable Stacks Grid */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
