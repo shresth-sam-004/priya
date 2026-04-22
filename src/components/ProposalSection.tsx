@@ -4,10 +4,13 @@ import confetti from 'canvas-confetti';
 export default function ProposalSection() {
   const [accepted, setAccepted] = useState(false);
   const [noPosition, setNoPosition] = useState({ x: 0, y: 0 });
+  const [noClickCount, setNoClickCount] = useState(0);
   const noButtonRef = useRef<HTMLButtonElement>(null);
 
   const handleNoHover = () => {
     if (accepted) return;
+    
+    setNoClickCount(prev => prev + 1);
     
     // Move the button to a random position within a safe boundary
     const x = Math.random() * 200 - 100; // -100 to 100
@@ -75,19 +78,21 @@ export default function ProposalSection() {
               Yes, I'd love to!
             </button>
             
-            <button 
-              ref={noButtonRef}
-              onMouseEnter={handleNoHover}
-              onClick={handleNoHover}
-              style={{ 
-                fontFamily: "'Montserrat', sans-serif",
-                transform: `translate(${noPosition.x}px, ${noPosition.y}px)`,
-                transition: 'transform 0.2s cubic-bezier(0.25, 1, 0.5, 1)'
-              }}
-              className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white/80 hover:text-white rounded-full text-xl font-medium tracking-wider backdrop-blur-sm border border-white/10 transition-colors"
-            >
-              No thanks
-            </button>
+            {noClickCount < 5 && (
+              <button 
+                ref={noButtonRef}
+                onMouseEnter={handleNoHover}
+                onClick={handleNoHover}
+                style={{ 
+                  fontFamily: "'Montserrat', sans-serif",
+                  transform: `translate(${noPosition.x}px, ${noPosition.y}px) scale(${1 - noClickCount * 0.2})`,
+                  transition: 'transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.2s'
+                }}
+                className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white/80 hover:text-white rounded-full text-xl font-medium tracking-wider backdrop-blur-sm border border-white/10 transition-colors"
+              >
+                No thanks
+              </button>
+            )}
           </div>
         </div>
       ) : (
